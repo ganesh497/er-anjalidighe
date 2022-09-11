@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="theme-color" content="rgb(125,10,55)">
+    <title>CMS Dashboard</title>
+
+    <link rel="icon" href="https://i.postimg.cc/sf90X1jp/logo2.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend:400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+<style>
+    ::-webkit-scrollbar { 
+        width: 0px !important;
+        display: none !important;
+    }
+    * {
+        font-family: 'Lexend';
+        user-select: none;
+    }
+    body {
+        background: #f5ecfe;
+    }
+
+    a {
+        font-style: normal !important;
+        text-decoration: none !important;
+    }
+    .sidenav {
+        overflow-x: hidden;
+        overflow-y: scroll !important;
+    }
+    .sidenav a {
+        text-decoration: none;
+        display: block;
+        color: white;
+    }
+
+    .active {
+        background: linear-gradient(to right, rgba(255, 50, 50, 0.25), rgba(255, 20, 20, 0.25));
+    }
+
+    
+    @media screen and (max-width: 768px) {
+        body {
+            background: #F7FBFC; //#F5F5F5; //F9F5F5;
+        }
+        .navbar {
+            height: 60px;
+        }
+        .hover-overlay {
+            padding: 12px 12px 0px 12px;
+        }
+        .icon-wrapper {
+            padding: 15px;
+            border-radius: 15px;
+            background: rgba(255, 50, 50, .05);
+        }
+        .icon-wrapper:hover, .active_tab {
+            background: rgba(125,10,55,1) !important;
+        }
+        .icon-wrapper:hover .icon, .icon-wrapper:hover .icon-text, .active_tab .icon, .active_tab .icon-text {
+            color: #FFF !important;
+        }
+        .icon {
+            width: 35px !important;
+            color: rgba(125,10,55,1);
+            padding-left: 5px;
+        }
+        .icon-text {
+            color: rgba(125,10,55,1);
+            padding-left: 10px;
+        }
+    }
+
+
+    @media screen and (min-width: 768px) {
+        .navbar {
+            height: 60px;
+        }
+        .sidenav {
+            width: 200px;
+            background: #9400d3;
+        }
+        .main {
+            margin-left: 200px;
+        }
+
+        .hover-overlay {
+            padding: 0px 10px 10px 10px;
+        }
+        .icon-wrapper {
+            padding: 14px;
+            border-radius: 10px;
+        }
+        .icon-wrapper:hover, .active_tab {
+            background: #FFF !important;
+        }
+        .icon-wrapper:hover .icon, .icon-wrapper:hover .icon-text, .active_tab .icon, .active_tab .icon-text {
+            color: #9400d3 !important;
+        }
+        .icon {
+            color: #FFF;
+            width: 30px !important;
+            display: block !important;
+        }
+        .icon-text {
+            color: #FFF;
+            font-size: 14px;
+            margin-left: 15px !important;
+        }
+    }
+
+    @media print {
+        * {
+            -webkit-print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+    }
+</style>
+
+    
+    <div class="offcanvas offcanvas-start border-0 sidenav" tabindex="-1" id="sider" data-mdb-scroll="true" data-mdb-backdrop="false">
+        <div class="hover-overlay mb-2 text-white" style="background: rgba(0,0,0,0.3); height: 60px; padding: 5px 10px;">
+            <div class="d-flex align-items-center w-100" style="padding: 14px;">
+                <i class="fa-solid fa-aperture fa-fw fa-lg icon"></i>
+                <span class="icon-text">CMS PORTAL</span>
+            </div>
+        </div>
+
+        <a class="hover-overlay" href="dashboard.php">
+            <div class="icon-wrapper ripple d-flex align-items-center w-100 active_tab">
+                <i class="fa-solid fa-grid-2 fa-fw fa-lg icon"></i>
+                <span class="icon-text">Dashboard</span>
+            </div>
+        </a>
+        <a class="hover-overlay" href="services.php">
+            <div class="icon-wrapper ripple d-flex align-items-center w-100">
+                <i class="fa-solid fa-store fa-fw fa-lg icon"></i>
+                <span class="icon-text" id="text3">Services</span>
+            </div>
+        </a>
+        <a class="hover-overlay" href="transactions.php">
+            <div class="icon-wrapper ripple d-flex align-items-center w-100">
+                <i class="fa-solid fa-right-left fa-fw fa-lg icon"></i>
+                <span class="icon-text">Transactions</span>
+            </div>
+        </a>
+        <a class="hover-overlay" href="profile">
+            <div class="icon-wrapper ripple d-flex align-items-center w-100">
+                <i class="fa-solid fa-user fa-fw fa-lg icon"></i>
+                <span class="icon-text">Profile</span>
+            </div>
+        </a>
+        <a class="hover-overlay" href="support">
+            <div class="icon-wrapper ripple d-flex align-items-center w-100">
+                <i class="fa-solid fa-message-check fa-fw fa-lg icon"></i>
+                <span class="icon-text">Support</span>
+            </div>
+        </a>
+        <a class="hover-overlay" href="../logout.php">
+            <div class="icon-wrapper ripple d-flex align-items-center w-100">
+                <i class="fa-solid fa-arrow-right-from-bracket fa-fw fa-lg icon"></i>
+                <small class="icon-text">Sign Out</small>
+            </div>
+        </a>
+        <a class="d-md-none w-100" href="#" style="padding: 12px;" data-mdb-dismiss="offcanvas" aria-label="Close">
+            <div class="icon-wrapper ripple d-flex align-items-center w-100">
+                <i class="fas fa-times-circle fa-fw fa-lg icon"></i>
+                <span class="icon-text">Close Menu</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="main" id="main">
+        <nav class="navbar navbar-expand-md sticky-top bg-white navbar-light shadow-1 p-0 px-1 px-md-2">
+        <div class="container-fluid p-0 px-md-2 d-flex align-items-center">
+            <button class="navbar-toggler" id="siderbtn" type="button" data-mdb-toggle="offcanvas" data-mdb-target="#sider" aria-controls="sider">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+
+            <i class="fa-solid fa-bars-sort fs-4" onclick="collapse()" id="siderbtn1"></i>
+            <i class="fa-solid fa-bars fs-4" onclick="expand()" id="siderbtn2"></i>
+            <p class="fs-4 ms-3 my-auto me-auto">Dashboard</p>
+        </div>
+    </nav>
+
+        <div class="main_div">
+
+        </div>
+    </div>
+
+    
+    <script>
+        AOS.init();
+
+        if(window.innerWidth > 768){
+            var sider = document.getElementById('siderbtn').click();
+        }
+    </script>
+
+    <script>
+        document.getElementById('siderbtn2').style.display = "none";
+
+        function collapse(){
+            document.getElementById('sider').style.width = "75px";
+            document.getElementById("main").style.marginLeft = "75px";
+            document.getElementById('siderbtn2').style.display = "block";
+            document.getElementById("siderbtn1").style.display = "none";
+        }
+
+        function expand(){
+            document.getElementById('sider').style.width = "200px";
+            document.getElementById("main").style.marginLeft = "200px";
+            document.getElementById('siderbtn1').style.display = "block";
+            document.getElementById('siderbtn2').style.display = "none";
+        }
+    </script>
+  </body>
+</html>
