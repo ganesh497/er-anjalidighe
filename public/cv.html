@@ -32,7 +32,7 @@
         }
 
         .section {
-            width: 21cm;
+            width: 19cm;
             height: 29.7cm;
         }
         .part-1 {
@@ -43,14 +43,14 @@
             width: 100%;
             background: dodgerblue;
             color: #FFF;
-            padding: 2em 2em 2em 2em;
+            padding: 2em 2em 4em 2em;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
         }
         .shape-h1 {
             font-family: "Merriweather" !important;
             font-weight: 900;
-            font-size: 28px;
-            margin: 1.3em 0em 0.5em 0em;
+            font-size: 34px;
+            margin: 1em 0 0.5em 0;
         }
         .shape-icon {
             font-size: 17px;
@@ -61,6 +61,43 @@
             font-weight: 700;
             font-size: 14px;
             line-height: 1em;
+        }
+
+        .div {
+            padding: 2em;
+        }
+        .div-body {
+            margin: 0 0 1.5em 0;
+        }
+        .div-shape {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.1);
+            clip-path: polygon(0 0, 60% 0, 100% 50%, 60% 100%, 0 100%);
+        }
+        .div-shape-text {
+            font-family: "Merriweather" !important;
+            font-weight: 700;
+            font-size: 25px;
+            margin-left: -1.3em !important;
+            color: #000;
+        }
+        .div-text {
+            font-family: "PT Sans" !important;
+            font-size: 14px;
+            margin-bottom: 0.6em;
+        }
+        .div-text-sharp {
+            color: #000;
+        }
+        .div-text-faint {
+            color: #fefefe;
+        }
+        .progress {
+            margin-bottom: 2em;
+        }
+        .progress-bar {
+            background: dodgerblue !important;
         }
 
 
@@ -77,6 +114,11 @@
 
         @media screen and (min-width: 768px) {
             
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
         }
 
         @media print {
@@ -119,14 +161,36 @@
                         <td><span class="shape-text">er-anjaldighe.ml</span></td>
                     </tr>
                 </table>
-                
-                 <br>
-
-                
-                 <br>
-
             </div>
 
+            <div class="div">
+                <div class="div-body d-flex align-items-center">
+                    <div class="div-shape"></div>
+                    <div class="div-shape-text">Languages</div>
+                </div>
+
+                <div class="div-text">
+                    <span class="div-text-sharp">English</span>
+                    <span class="float-end">7</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="div-text">
+                    <span class="div-text-sharp">Hindi</span>
+                    <span class="float-end">8</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="div-text">
+                    <span class="div-text-sharp">Marathi</span>
+                    <span class="div-text-faint float-end">10</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
         </div>
 
         <div class="part-2">
