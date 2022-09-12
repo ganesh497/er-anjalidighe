@@ -1,0 +1,182 @@
+::-webkit-scrollbar { 
+    width: 0px !important;
+    display: none !important;
+}
+* {
+    user-select: none;
+}
+body {
+    background: #f5f5f5 !important;
+}
+
+.section {
+    width: 21cm;
+    height: 29.7cm !important;
+}
+.section-break {
+    width: 100%;
+    height: 75px;
+    background: #f5f5f5;
+}
+.section-col-1 {
+    width: 37%;
+    background: #FFF;
+}
+.shape-div {
+    width: 100%;
+    background: dodgerblue;
+    color: #FFF;
+    padding: 2em 2em 4.2em 2em;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+.shape-div-h1 {
+    font-family: "Merriweather" !important;
+    font-weight: 900;
+    font-size: 32px;
+    margin: 1em 0em 0.5em 0em;
+}
+.shape-div-icon {
+    font-size: 17px;
+    text-align: center !important;
+}
+.shape-div-text {
+    font-family: "PT Sans" !important;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1em;
+}
+
+.block-1 {
+    padding: 2em 2em 0em 2em;
+}
+.block-1-div {
+    margin: 0 0 1.4em 0;
+}
+.block-1-shape {
+    width: 55px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 60% 0, 100% 50%, 60% 100%, 0 100%);
+}
+.block-1-shape-text {
+    font-family: "Merriweather" !important;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: -1.35em !important;
+    color: #000;
+}
+.progress-text {
+    font-family: "PT Sans" !important;
+    font-size: 14px;
+    margin-bottom: 0.5em;
+}
+.progress-text-sharp {
+    color: #000;
+}
+.progress-text-faint {
+    color: gray;
+}
+.progress {
+    margin-bottom: 2em;
+}
+.progress-bar {
+    background: dodgerblue !important;
+}
+
+
+
+.section-col-2{
+    width: 63%;
+    background: #FFF;
+    padding: 2em;
+}
+.section-col-2-div {
+    margin-bottom: 2em;
+}
+.block-1-div-text {
+    font-family: "PT Sans" !important;
+    font-weight: 400;
+    font-size: 15px;
+    text-align:justify;
+}
+.block-2-head {
+    font-family: "Merriweather" !important;
+    font-weight: 400;
+    font-size: 17px;
+}
+.block-2-head-icon {
+    font-size: 10px;
+    color: dodgerblue;
+    margin-right: 0.7em;
+}
+.block-2-body {
+    margin: 0.7em 0em 0.7em 0.2em;
+    padding: 0.2em 0em 0.2em 1em;
+    border-left: 1.5px solid dodgerblue;
+    font-family: "PT Sans" !important;
+}
+.block-2-body-text {
+    font-family: "PT Sans" !important;
+    font-weight: 700;
+    font-size: 16px;
+    color: dodgerblue;
+}
+.block-2-subhead {
+    font-family: "PT Sans" !important;
+    font-size: 12px;
+    color: gray;
+}
+.block-2-table {
+    font-family: "PT Sans" !important;
+    font-size: 13.7px;
+    width: 100%;
+    margin: 1em 0em;
+}
+.block-2-table tr td {
+    padding: 0.23em 0em;
+}
+.block-2-table tr td:nth-of-type(1){
+    max-width: 100%;
+}
+.block-2-table tr td:nth-of-type(2){
+    width: 140px !important;
+}
+.block-2-table tr #cert {
+    min-width: 280px !important;
+}
+.block-2-body-list {
+    font-family: "PT Sans" !important;
+    font-size: 13.7px;
+    margin: 1em 0em;
+    padding-left: 1em;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+}
+
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+    body {
+        background: #FFF;
+    }
+    .section {
+        width: 100%;
+        height: 100%;
+    }
+}
