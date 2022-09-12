@@ -1,3 +1,8 @@
+:root{
+    --theme1: dodgerblue;
+    --theme2: deeppink;
+}
+
 ::-webkit-scrollbar { 
     width: 0px !important;
     display: none !important;
@@ -24,7 +29,7 @@ body {
 }
 .shape-div {
     width: 100%;
-    background: dodgerblue;
+    background: var(--theme1);
     color: #FFF;
     padding: 2em 2em 4.2em 2em;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
@@ -55,7 +60,7 @@ body {
 .block-1-shape {
     width: 55px;
     height: 50px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.06);
     clip-path: polygon(0 0, 60% 0, 100% 50%, 60% 100%, 0 100%);
 }
 .block-1-shape-text {
@@ -80,7 +85,7 @@ body {
     margin-bottom: 2em;
 }
 .progress-bar {
-    background: dodgerblue !important;
+    background: var(--theme1) !important;
 }
 
 
@@ -106,20 +111,20 @@ body {
 }
 .block-2-head-icon {
     font-size: 10px;
-    color: dodgerblue;
+    color: var(--theme1);
     margin-right: 0.7em;
 }
 .block-2-body {
     margin: 0.7em 0em 0.7em 0.2em;
     padding: 0.2em 0em 0.2em 1em;
-    border-left: 1.5px solid dodgerblue;
+    border-left: 1.5px solid var(--theme1);
     font-family: "PT Sans" !important;
 }
 .block-2-body-text {
     font-family: "PT Sans" !important;
     font-weight: 700;
     font-size: 16px;
-    color: dodgerblue;
+    color: var(--theme1);
 }
 .block-2-subhead {
     font-family: "PT Sans" !important;
