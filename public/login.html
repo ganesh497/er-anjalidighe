@@ -109,28 +109,28 @@
     </style>
 
     <div class="main row g-0">
-        <div class="col-md-5 col1 ms-md-auto my-auto p-5 shadow-5 d-none d-md-flex align-items-center justify-contents-center" id="col1">
+        <div class="col-md-5 col1 ms-md-auto my-auto p-5 shadow-5 d-none d-md-flex align-items-center justify-contents-center" id="col1" data-aos="fade-right" data-aos-duration="1000">
             <div class="text-center p-3">
                 <center>
-                    <h1 class="text-white">CMS</h1>
-                    <p class="text-light mb-0">An Initiative of Commission Bills Generator Portal for Employees of Department of Posts</p>
+                    <h1 class="text-white" data-aos="zoom-in-down" data-aos-duration="1300">CMS</h1>
+                    <p class="text-light mb-0" data-aos="zoom-in-up" data-aos-duration="1300">An Initiative of Commission Bills Generator Portal for Employees of Department of Posts</p>
                 </center>
             </div>
         </div>
 
 
-        <div class="col-md-4 col2 me-md-auto my-md-auto overflow-hidden shadow-5" id="col2">
-            <div class="sub_div1 d-md-none p-5 px-4 d-flex">
+        <div class="col-md-4 col2 me-md-auto my-md-auto overflow-hidden shadow-5" id="col2" data-aos="fade-left" data-aos-duration="1000">
+            <div class="sub_div1 d-md-none p-5 px-4 d-flex" data-aos="fade-down" data-aos-duration="1000">
                 <h3 class="text-white ps-2">CMS Portal</h3>
                 <i class="fa-solid fa-bars-staggered fs-4 text-white pe-2 me-0 ms-auto" type="button"></i>
             </div>
 
             <div class="sub_div2 bg-white">
                 <div class="p-2 pb-0 text-center">
-                    <img class="logo" src="images/224422.png">
+                    <img class="logo" src="images/224422.png" data-aos="zoom-in-up" data-aos-duration="1300">
                 </div>
 
-                <div class="p-4 p-md-5 py-2 py-md-2 mx-2 mx-md-0">
+                <div class="p-4 p-md-5 py-2 py-md-2 mx-2 mx-md-0" data-aos="zoom-in-down" data-aos-duration="1300">
                     <h2 class="text-center text-dark mb-4">Welcome to CMS!</h2>
                     <div class="mb-4 pb-2">
                         <input type="number" name="Mobile" class="form-control px-4 shadow-none border-0 <?php echo (!empty($Mobile_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $Mobile; ?>" placeholder="Mobile Number">
@@ -169,6 +169,8 @@
                 }
             } 
         }
+
+        AOS.init();
     </script>
 
     
