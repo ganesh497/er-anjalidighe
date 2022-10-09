@@ -47,10 +47,9 @@
             height: 100vh;
         }
 
-
         .form-control, .form-control:focus {
             background: rgba(0,0,0,0.07);
-            padding: 15px;
+            padding: 14px;
             border-radius: 15px !important;
         }
         .btn1, .btn1:hover, .btn1:active, .btn2 {
@@ -80,6 +79,9 @@
                 bottom: 0px;
                 width: 100%;
             }
+            .logo {
+                width: 80%;
+            }
         }
 
 
@@ -90,6 +92,9 @@
             }
             .col2 {
                 border-radius: 0px 30px 30px 0px !important;
+            }
+            .logo {
+                width: 50%;
             }
         }
 
@@ -102,7 +107,7 @@
     </style>
 
     <div class="main row g-0">
-        <div class="col-md-5 col1 ms-md-auto my-auto p-5 shadow-4 d-none d-md-flex align-items-center justify-contents-center" id="col1">
+        <div class="col-md-5 col1 ms-md-auto my-auto p-5 shadow-5 d-none d-md-flex align-items-center justify-contents-center" id="col1">
             <div class="text-center p-3">
                 <center>
                     <h1 class="text-white">CMS</h1>
@@ -113,18 +118,19 @@
         </div>
 
 
-        <div class="col-md-4 col2 me-md-auto my-md-auto overflow-hidden shadow-4" id="col2">
+        <div class="col-md-4 col2 me-md-auto my-md-auto overflow-hidden shadow-5" id="col2">
             <div class="sub_div1 d-md-none p-5 px-4 d-flex">
                 <h3 class="text-white ps-2">CMS Portal</h3>
                 <i class="fa-solid fa-bars-staggered fs-4 text-white pe-2 me-0 ms-auto" type="button"></i>
             </div>
 
             <div class="sub_div2 bg-white">
-                <div class="p-2">
+                <div class="p-2 pb-0 text-center">
+                    <img class="logo" src="images/224422.png">
 
                 </div>
 
-                <div class="p-4 p-md-5 pb-2 pb-md-2">
+                <div class="p-4 p-md-5 py-2 py-md-2">
                     <h2 class="text-center mb-4">Welcome Back!</h2>
                     <div class="mb-4">
                         <input type="number" name="Mobile" class="form-control px-4 shadow-none border-0 <?php echo (!empty($Mobile_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $Mobile; ?>" placeholder="Mobile Number">
