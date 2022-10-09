@@ -155,18 +155,20 @@
     </div>
 
     <script>
-        var a = document.getElementById('col1').offsetHeight;
-        var b = document.getElementById('col2').offsetHeight;
-        var apx = a + "px";
-        var bpx = b + "px";
+        window.onload = function(){
+            var a = document.getElementById('col1').offsetHeight;
+            var b = document.getElementById('col2').offsetHeight;
+            var apx = a + "px";
+            var bpx = b + "px";
 
-        if(window.innerWidth > 768){
-            if(a < b){
-                document.getElementById("col1").style.height = bpx;
-            } else {
-                document.getElementById("col2").style.height = apx;
-            }
-        } 
+            if(window.innerWidth > 768){
+                if(a < b){
+                    document.getElementById("col1").style.height = bpx;
+                } else {
+                    document.getElementById("col2").style.height = apx;
+                }
+            } 
+        }
     </script>
 
     
