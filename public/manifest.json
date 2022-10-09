@@ -1,0 +1,22 @@
+{
+	"name":"Er Anjali Dighe",
+	"short_name":"Er Anjali Dighe",
+	"start_url":"index.html",
+	"display":"standalone",
+	"background_color":"#5900b3",
+	"theme_color":"#5900b3",
+	"scope": ".",
+	"description":"Er Anjali Dighe's Portfolio Site",
+	"icons":[
+	{
+	"src":"images/logo.png",					
+	"sizes":"192x192",
+	"type":"image/png"
+	},
+	{
+	"src":"images/logo.png",
+	"sizes":"512x512",
+	"type":"image/png"
+	}
+]
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="theme-color" content="transparent">
+    <title>CMS Portal</title>
+
+    <link rel="icon" href="https://i.postimg.cc/SxSJSYKL/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend:400,500,700,&display=swap" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        * {
+            font-family: 'Lexend';
+            user-select: none;
+        }
+        .swal2-container {
+            padding: 20px !important;
+        }
+        .swal2-container > div {
+            border-radius: 30px !important;
+            overflow: hidden !important;
+        }
+        .swal2-timer-progress-bar {
+            background: #F93154 !important; 
+        }
+    </style>
+</head>
+<body>
+    <style>
+        ::-webkit-scrollbar { 
+            width: 0px !important;
+            display: none !important;
+        }
+        * {
+            font-family: 'Lexend';
+            user-select: none;
+        }
+        .main {
+            width: 100vw;
+            height: 100vh;
+        }
+
+
+        .form-control, .form-control:focus {
+            background: rgba(0,0,0,0.07);
+            padding: 15px;
+            border-radius: 15px !important;
+        }
+        .btn1, .btn1:hover, .btn1:active, .btn2 {
+            width: 100%;
+            border: 0px;
+            padding: 20px;
+            font-size: 15px;
+            background: #FFF !important;
+        }
+        .btn2, .btn2:hover, .btn2:active {
+            background: rgb(125,10,55) !important;
+            border-radius: 25px 0px 0px 0px;
+            color: #FFF !important;
+        }
+
+        @media screen and (max-width: 768px) {
+            .col2 {
+                height: 100vh;
+                background: rgb(125,10,55);
+            }
+            .sub_div1 {
+                background: rgb(125,10,55);
+            }
+            .sub_div2 {
+                border-radius: 30px 30px 0px 0px;
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+            }
+        }
+
+
+        @media screen and (min-width: 768px) {
+            .col1 {
+                border-radius: 30px 0px 0px 30px;
+                background: rgb(125,10,55);
+            }
+            .col2 {
+                border-radius: 0px 30px 30px 0px !important;
+            }
+        }
+
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
+    </style>
+
+    <div class="main row g-0">
+        <div class="col-md-5 col1 ms-md-auto my-auto p-5 shadow-4 d-none d-md-flex align-items-center justify-contents-center" id="col1">
+            <div class="text-center p-3">
+                <center>
+                    <h1 class="text-white">CMS</h1>
+                    <h1 class="bg-white rounded-5" style="height: 3px; width: 17%;"></h1>
+                    <p class="text-light mb-0">An Initiative of Commission Bills Generator Portal for Employees of Department of Posts</p>
+                </center>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 col2 me-md-auto my-md-auto overflow-hidden shadow-4" id="col2">
+            <div class="sub_div1 d-md-none p-5 px-4 d-flex">
+                <h3 class="text-white ps-2">CMS Portal</h3>
+                <i class="fa-solid fa-bars-staggered fs-4 text-white pe-2 me-0 ms-auto" type="button"></i>
+            </div>
+
+            <div class="sub_div2 bg-white">
+                <div class="p-2">
+
+                </div>
+
+                <div class="p-4 p-md-5 pb-2 pb-md-2">
+                    <h2 class="text-center mb-4">Welcome Back!</h2>
+                    <div class="mb-4">
+                        <input type="number" name="Mobile" class="form-control px-4 shadow-none border-0 <?php echo (!empty($Mobile_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $Mobile; ?>" placeholder="Mobile Number">
+                    </div>
+        
+                    <div class="mb-4">
+                        <input type="password" name="password" class="form-control px-4 shadow-none border-0 <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" placeholder="Password">
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="w-50">
+                        <button class="btn btn-light shadow-none btn1">Register</button>
+                    </div>
+                    <div class="w-50">
+                        <button class="btn btn-light shadow-none btn2">SIGN IN
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var a = document.getElementById('col1').offsetHeight;
+        var b = document.getElementById('col2').offsetHeight;
+        var apx = a + "px";
+        var bpx = b + "px";
+
+        if(window.innerWidth > 768){
+            if(a > b){
+                document.getElementById("col2").style.height = apx;
+            } else {
+                document.getElementById("col1").style.height = bpx;
+            }
+        } 
+    </script>
+</body>
+</html>

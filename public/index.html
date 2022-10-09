@@ -17,6 +17,8 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <style>
@@ -51,9 +53,29 @@
         }
     </style>
 
-    <div class="site-bg1">
+    <div class="site-bg1 bg-warning">
 
     </div>
 
+    <script>
+        window.addEventListener('load', () => {
+            registerSW();
+        });
+    
+        // Register the Service Worker
+        async function registerSW() {
+        if ('serviceWorker' in navigator) {
+            try {
+            await navigator
+                    .serviceWorker
+                    .register('serviceworker.js');
+            }
+            catch (e) {
+            console.log('SW registration failed');
+            }
+        }
+        }
+    </script>
+    
   </body>
 </html>
