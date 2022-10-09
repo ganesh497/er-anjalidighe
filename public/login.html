@@ -161,10 +161,10 @@
         var bpx = b + "px";
 
         if(window.innerWidth > 768){
-            if(a > b){
-                document.getElementById("col2").style.height = apx;
-            } else {
+            if(a < b){
                 document.getElementById("col1").style.height = bpx;
+            } else {
+                document.getElementById("col2").style.height = apx;
             }
         } 
     </script>
